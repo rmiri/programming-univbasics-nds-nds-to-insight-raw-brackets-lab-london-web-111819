@@ -26,7 +26,7 @@ def directors_totals(nds)
       #what it needs to do it's go to each moviescollum wwgross and add the sum of the price to the total gross.
     #result[director_name] << totalGross
     thisFilmGross = nds[directors_row][:movies][movies_collumn][:worldwide_gross]
-    totalGross += thisFilmGross
+    totalGross = totalGross + thisFilmGross
 
     movies_collumn += 1
     end
@@ -38,5 +38,5 @@ def directors_totals(nds)
 
 result
 
-  
+
 end
