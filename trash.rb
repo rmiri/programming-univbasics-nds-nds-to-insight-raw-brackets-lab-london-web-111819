@@ -78,10 +78,13 @@ def directors_totals(nds)
   totalGross = 0
     while movies_collumn < nds[directors_row].length do
     #result[director_name] << totalGross
-    totalGross += nds[directors_row][:name][:movies][movies_collumn][:worldwide_gross].to_i
+    totalGross += nds[directors_row][:name][:movies][movies_collumn][:worldwide_gross]
     movies_collumn += 1
     end
   end
 puts result
   nil
 end
+
+
+
