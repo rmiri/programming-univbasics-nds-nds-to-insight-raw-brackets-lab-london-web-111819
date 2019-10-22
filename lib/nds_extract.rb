@@ -17,12 +17,12 @@ def directors_totals(nds)
 
   directors_row = 0
 
-  while directors_row <= nds.length do
+  while directors_row < nds.length do
 
   movies_collumn = 0
   totalGross = 0
 
-    while movies_collumn <= nds[directors_row].length do
+    while movies_collumn < nds[directors_row].length do
       #what it needs to do it's go to each moviescollum wwgross and add the sum of the price to the total gross.
     #result[director_name] << totalGross
     thisFilmGross = nds[directors_row][:movies][movies_collumn][:worldwide_gross]
