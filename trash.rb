@@ -85,6 +85,3 @@ def directors_totals(nds)
 puts result
   nil
 end
-
-
-
