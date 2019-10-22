@@ -14,14 +14,29 @@ def directors_totals(nds)
   # Be sure to return the result at the end!
 
   #nds[directors_row][:name][:movies][movies_collumn][:worldwide_gross]
-  totes = 0
 
-  nds.each do |n|
-    n[1].each do |y|
-      totes += y[1].inspect.to_i
+  directors_row = 0
+
+  while directors_row < nds.length do
+
+  movies_collumn = 0
+  totalGross = 0
+
+    while movies_collumn < nds[directors_row].length do
+      #what it needs to do it's go to each moviescollum wwgross and add the sum of the price to the total gross.
+    #result[director_name] << totalGross
+    thisFilmGross = nds[directors_row][:movies][movies_collumn][:worldwide_gross]
+    totalGross += thisFilmGross
+
+    movies_collumn += 1
     end
-    puts "the #{n[0]} has #{totes}"
+        result.store(nds[directors_row][:name], totalGross)
+    directors_row += 1
+
   end
+
+
+result
 
   nil
 end
